@@ -8,7 +8,7 @@ const secrets = new Secrets({
   OAUTH_AUTHORIZE_PATH: '/login/oauth/authorize',
   OAUTH_CLIENT_ID: 'foo',
   OAUTH_CLIENT_SECRET: 'bar',
-  REDIRECT_URL: 'https://www.control-alt-del.org/oauth/callback',
+  REDIRECT_URL: 'http://localhost:3000/oauth/callback',
   OAUTH_SCOPES: 'repo,user',
 });
 
