@@ -32,7 +32,7 @@ const secrets = new Secrets({
   OAUTH_AUTHORIZE_PATH: '/login/oauth/authorize',
   OAUTH_CLIENT_ID: 'foo',
   OAUTH_CLIENT_SECRET: 'bar',
-  REDIRECT_URL: 'http://localhost:3000/oauth/callback',
+  REDIRECT_URL: 'http://localhost:3000/callback',
   OAUTH_SCOPES: 'repo,user',
 });
 ```
