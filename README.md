@@ -73,7 +73,7 @@ Finally, once the code is deployed you need to add some parameters to the AWS pa
 
 Head on over to the AWS console, find the Systems manager, and go to the Parameter store.
 
-In there, you'll want to create the following parameters/values (as SecureStrings):
+In there, you'll want to create the following parameters/values (as SecureStrings), making sure to replace `STAGE` with your stage (eg: prod):
 
 * /ctrl-alt-del/oauth/`STAGE`/GIT_HOSTNAME - The github host to use. Ex: https://github.com
 * /ctrl-alt-del/oauth/`STAGE`/OAUTH_TOKEN_PATH - The token api uri path. Most probably this: /login/oauth/access_token
