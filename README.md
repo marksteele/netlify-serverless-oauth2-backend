@@ -75,11 +75,11 @@ Head on over to the AWS console, find the Systems manager, and go to the Paramet
 
 In there, you'll want to create the following parameters/values (as SecureStrings):
 
-* /ctrl-alt-del/oauth/<STAGE>/GIT_HOSTNAME - The github host to use. Ex: https://github.com
-* /ctrl-alt-del/oauth/<STAGE>/OAUTH_TOKEN_PATH - The token api uri path. Most probably this: /login/oauth/access_token
-* /ctrl-alt-del/oauth/<STAGE>/OAUTH_AUTHORIZE_PATH - The authorize api uri path. Most probably this: /login/oauth/authorize 
-* /ctrl-alt-del/oauth/<STAGE>/OAUTH_CLIENT_ID - Your Github OAuth client id
-* /ctrl-alt-del/oauth/<STAGE>/OAUTH_CLIENT_SECRET - Your Github OAuth client secret
-* /ctrl-alt-del/oauth/<STAGE>/REDIRECT_URL - Your callback URL. It will look something like this: https://RANDOMSTUFF.execute-api.us-east-1.amazonaws.com/<STAGE>/callback
-* /ctrl-alt-del/oauth/<STAGE>/OAUTH_SCOPES - The scopes to grant. Probably this: repo,user
+* /ctrl-alt-del/oauth/`STAGE`/GIT_HOSTNAME - The github host to use. Ex: https://github.com
+* /ctrl-alt-del/oauth/`STAGE`/OAUTH_TOKEN_PATH - The token api uri path. Most probably this: /login/oauth/access_token
+* /ctrl-alt-del/oauth/`STAGE`/OAUTH_AUTHORIZE_PATH - The authorize api uri path. Most probably this: /login/oauth/authorize 
+* /ctrl-alt-del/oauth/`STAGE`/OAUTH_CLIENT_ID - Your Github OAuth client id
+* /ctrl-alt-del/oauth/`STAGE`/OAUTH_CLIENT_SECRET - Your Github OAuth client secret
+* /ctrl-alt-del/oauth/`STAGE`/REDIRECT_URL - Your callback URL. It will look something like this: https://`RANDOMSTUFF`.execute-api.us-east-1.amazonaws.com/`STAGE`/callback
+* /ctrl-alt-del/oauth/`STAGE`/OAUTH_SCOPES - The scopes to grant. Probably this: repo,user
 
