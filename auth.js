@@ -10,20 +10,22 @@ const secrets = new Secrets({
   OAUTH_CLIENT_SECRET: 'bar',
   REDIRECT_URL: 'http://localhost:3000/callback',
   OAUTH_SCOPES: 'repo,user',
+  TARGET_ORIGIN: 'http://localhost:4000',
 });
 
 
-function getScript(mess, content) {
+function getScript(mess, content, targetOrigin = '') {
   return `<html><body><script>
   (function() {
     function receiveMessage(e) {
       console.log("receiveMessage %o", e)
       window.opener.postMessage(
         'authorization:github:${mess}:${JSON.stringify(content)}',
-        e.origin
+        (window.targetOrigin) ? window.targetOrigin : e.origin
       )
       window.removeEventListener("message",receiveMessage,false);
     }
+    window.targetOrigin = '` + targetOrigin + `'
     window.addEventListener("message", receiveMessage, false)
     console.log("Sending message: %o", "github")
     window.opener.postMessage("authorizing:github", "*")
@@ -93,7 +95,7 @@ module.exports.callback = (e, ctx, cb) => {
           body: getScript('success', {
             token: token.token.access_token,
             provider: 'github',
-          }),
+          }, secrets.TARGET_ORIGIN),
         },
       );
     })
