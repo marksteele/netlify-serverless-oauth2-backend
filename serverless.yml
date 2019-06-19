@@ -6,12 +6,12 @@ provider:
   environment:
     GIT_HOSTNAME: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/GIT_HOSTNAME"
     KMS_KEY: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/KMS_KEY"
-    OAUTH_TOKEN_PATH: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_TOKEN_PATH"
     OAUTH_AUTHORIZE_PATH: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_AUTHORIZE_PATH"
     OAUTH_CLIENT_ID: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_CLIENT_ID"
     OAUTH_CLIENT_SECRET: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_CLIENT_SECRET"
-    REDIRECT_URL: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/REDIRECT_URL"
     OAUTH_SCOPES: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_SCOPES"
+    OAUTH_TOKEN_PATH: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_TOKEN_PATH"
+    REDIRECT_URL: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/REDIRECT_URL"
     TZ: "utc"
     TARGET_ORIGIN: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/TARGET_ORIGIN"
   iamRoleStatements:
