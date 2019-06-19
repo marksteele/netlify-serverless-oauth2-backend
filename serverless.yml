@@ -12,6 +12,7 @@ provider:
     REDIRECT_URL: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/REDIRECT_URL"
     OAUTH_SCOPES: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_SCOPES"
     TZ: "utc"
+    TARGET_ORIGIN: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/TARGET_ORIGIN"
   iamRoleStatements:
     - Effect: Allow
       Action:
