@@ -5,6 +5,7 @@ provider:
   stage: ${opt:stage, self:custom.defaultStage}
   environment:
     GIT_HOSTNAME: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/GIT_HOSTNAME"
+    KMS_KEY: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/KMS_KEY"
     OAUTH_TOKEN_PATH: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_TOKEN_PATH"
     OAUTH_AUTHORIZE_PATH: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_AUTHORIZE_PATH"
     OAUTH_CLIENT_ID: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/OAUTH_CLIENT_ID"
@@ -27,9 +28,9 @@ provider:
 custom:
   defaultStage: dev
   kms_key:
-    "us-east-1":
-      prod: "01660d80-64fb-4444-9b21-bb15ac2f97ec"
-      dev: "foo"
+    "eu-west-2":
+      prod: ${self:provider.environment.KMS_KEY}
+      dev: ${self:provider.environment.KMS_KEY}
 
 functions:
   auth:
