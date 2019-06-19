@@ -2,6 +2,8 @@ const simpleOauthModule = require('simple-oauth2');
 const randomstring = require('randomstring');
 const Secrets = require('./lib/secrets');
 
+// DO NOT COMMIT LOCAL CHANGES - THESE ARE FOR OFFLINE TESTING
+// TODO: Work out how to move these into an ignorable file or local env vars
 const secrets = new Secrets({
   GIT_HOSTNAME: 'https://github.com',
   OAUTH_TOKEN_PATH: '/login/oauth/access_token',
