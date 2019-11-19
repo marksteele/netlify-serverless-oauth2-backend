@@ -1,7 +1,7 @@
 service: serverless-oauth2
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12
   stage: ${opt:stage, self:custom.defaultStage}
   environment:
     GIT_HOSTNAME: "/kpopper.github.io/oauth/${opt:stage, self:provider.stage}/GIT_HOSTNAME"
