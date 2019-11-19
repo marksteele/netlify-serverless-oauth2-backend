@@ -19,7 +19,7 @@ This code can be run either locally (using the serverless-offline plugin) or dep
 To run it locally:
 
 ```
-sls offline
+sls offline --region <REGION>
 ```
 
 Before running it, update auth.js to reflect your desired configuration. The settings are defined in the initialization of the Secrets class:
@@ -52,7 +52,7 @@ aws kms describe-key --key-id alias/aws/ssm --profile <YOURAWSPROFILE> --region 
 ex:
 
 ```
-aws kms describe-key --key-id alias/aws/ssm --profile ctrl-alt-del --region us-east-1
+aws kms describe-key --key-id alias/aws/ssm --profile ctrl-alt-del --region eu-west-1
 ```
 
 If you're unfamiliar with AWS profiles, see this documentation: https://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html
@@ -66,7 +66,7 @@ sls deploy -s <STAGE> --aws-profile <YOURAWSPROFILE> --region <REGION>
 Ex:
 
 ```
-sls deploy -s prod --aws-profile ctrl-alt-del --region us-east-1
+sls deploy -s prod --aws-profile ctrl-alt-del --region eu-west-1
 ```
 
 Finally, once the code is deployed you need to add some parameters to the AWS parameter store.

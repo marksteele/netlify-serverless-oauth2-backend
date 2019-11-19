@@ -28,7 +28,7 @@ provider:
 custom:
   defaultStage: dev
   kms_key:
-    "eu-west-2":
+    "eu-west-1":
       prod: ${self:provider.environment.KMS_KEY}
       dev: ${self:provider.environment.KMS_KEY}
 
